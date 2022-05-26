@@ -1,13 +1,20 @@
 import { Fragment } from 'react'
+import HeaderCartButton from './HeaderCartButton'
+import Pizzaimg from '../../components/images/HeaderImgPizza.jpg'
 // creating a Header section
 const Header = props => {
 	return (
 		<Fragment>
-			<header className='{classes.header}'>
+			<header className='header'>
 				<h1>VaffaNapoli</h1>
-				<button>Cart</button>
+				<HeaderCartButton onClick={props.onShowCart} />
 			</header>
-			<div className="{classes['main-image']}"></div>
+
+			<div className='main-image'>
+		
+				<img src={Pizzaimg} alt='Pizza'>
+				</img>
+			</div>
 		</Fragment>
 	)
 }
